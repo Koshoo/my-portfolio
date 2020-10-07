@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Benkosh - Web Developer</title>
+  </head>
+  <body>
+
+    <img src="./chevron.png" href="#" id="toTop" title="Go to top"></img>
+
+    <div class="header" id="myHeader">
+
+      <nav class="navbar">
+        <img height="75px"class="logo" src="./asd.png" alt="">
+        <ul class="nav-links">
+          <li> <a href="#" class="nav-link selected" id="about-btn"
+            >ABOUT</a
+          ></li>
+          <li><a href="#scroll2" class="nav-link not-selected" >My Skillset</a></li>
+          <li><a href="#scroll3" class="nav-link not-selected" data-scrollY="2199">My projects</a></li>
+          <li><a href="#scroll4" class="nav-link not-selected" data-scrollY="2199">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cv-wrapper">
+        <a class="cv glowButton">DOWNLOAD CV</a>
+      </div>
+    </div>
+
+    <div id="section1" class="section">
+      <div class="left">
+      <div class="hero">
+        <p class="hey">👋 Hey There...</p>
+        <p class="me">I'm <span>Ben Koshrovski</span>, a <br/>Full-Stack Developer from TLV</p>
+        <p class="self">Self taught Full-Stack web developer experienced <br/> with building websites and web applications.</p>
+      </div>
+      <a class="see-more">See What I Can Do ▼</a>
+        </div>
+        <div class="right">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+      </div>
+      </div>
+    </div>
+
+    <div id="scroll2" class="scroll-position"></div>
+    <div id="section2" class="section">
+      <br />
+      <div class="card">
+        <div class="about-container">
+          <h2 class="about-title">About me</h2>
+          <p class="about">
+            When I first discovered Web Deveolopment, I was instantly hooked. I
+            am passionate about building Web Applications using mainly
+            Javascript. Self taught for over 2 years in the most recent and
+            relavent languages and frameworks, such as HTML, CSS, Javascript,
+            React JS, Node.js, Express and MongoDB. Highly motivated to keep
+            developing and learning. A TEAM PLAYER!
+          </p>
+        </div>
+        <div class="skill-set-container">
+          <h1>Skill Set</h1>
+          <div class="bar back advanced" data-skill="JavaScript"></div>
+          <div class="bar advanced" data-skill="React"></div>
+          <div class="bar advanced" data-skill="Node.js"></div>
+          <div class="bar back intermediate" data-skill="C#"></div>
+          <div class="bar front intermediate" data-skill="CSS3"></div>
+          <div class="bar front advanced" data-skill="HTML5"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="scroll3" class="scroll-position"></div>
+    <div id="section3" class="section">
+      <p class="projects-info">
+        When I first discovered Web Deveolopment, I was instantly hooked. I am
+        passionate about building Web Applications using mainly Javascript. Self
+        taught for over 2 years in the most recent and relavent languages and
+        frameworks, such as HTML, CSS, Javascript, React JS, Node.js, Express
+        and MongoDB. Highly motivated to keep developing and learning. A TEAM
+        PLAYER!
+      </p>
+    </div>
+
+    <div id="scroll4" class="scroll-position"></div>
+    <div id="section4" class="section">
+      <p class="contact">
+       Contact me
+      </p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
