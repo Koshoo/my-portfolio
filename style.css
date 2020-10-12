@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -12,7 +16,6 @@ body {
 .header {
   display: flex;
   font-family: 'Noto Sans JP', sans-serif;
-  color: white;
   transition: background-color 1s;
   position: fixed;
   top: 0;
@@ -23,27 +26,36 @@ body {
   align-items: center;
 }
 
+.section {
+  height: 100%;
+}
+
 .cv-wrapper {
   width: 10%;
+  margin-top: 15px;
 }
 
 .cv {
-  background-color: #ffb800;
+  background-color: #ecad0e;
   border-radius: 10px;
   padding: 5px 25px;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.logo {
+.logo-wrapper {
   width: 10%;
   margin-top: 25px;
+}
+
+.logo {
 }
 
 .navbar {
   display: flex;
   width: 80%;
   justify-content: space-around;
+  align-items: center;
 }
 
 .nav-links {
@@ -63,8 +75,8 @@ li {
   font-family: 'Roboto', sans-serif;
 }
 
-span {
-  background-color: #ffb800;
+.orange {
+  background-color: #ecad0e;
   border-radius: 5px;
   padding: 5px 17px;
 }
@@ -72,7 +84,7 @@ span {
 .nav-link.not-selected:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #ffb800;
+  border-bottom: solid 3px #ecad0e;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -80,30 +92,35 @@ span {
 .nav-link.selected:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #ffb800;
+  border-bottom: solid 3px #ecad0e;
 }
 
 .nav-link:hover:after {
   transform: scaleX(1);
-  transform-origin: 0% 50%;
+  transform-origin: 50%;
 }
 
-.section {
-  height: 100%;
+.toggle-button {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38px;
+  height: 26px;
+}
+
+.hbar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 #section1 {
-  /* background: linear-gradient(to right,
-      #0d1118,
-      #121821,
-      #111720,
-      #161f2a,
-      #111720,
-      #121821,
-      #0d1118); */
   background-color: black;
   display: flex;
-  justify-content: space-between;
 }
 
 #section2 {
@@ -111,34 +128,24 @@ span {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.left {
-  display: flex;
-  flex-direction: column;
-  margin-left: 40px;
-}
-
-.right {
-  width: 600px;
-  margin-right: 40px;
-}
-
 .hero {
   color: white;
-  font-family: 'Noto Sans JP', sans-serif;
   margin-top: 25vh;
   margin-left: 40px;
 }
 
 .hey {
-  color: gray;
+  color: rgb(145, 143, 143);
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
 }
 
 .me {
-  font-size: 40px;
-  margin-bottom: 20px;
+  width: 769px;
   font-family: 'Roboto Slab';
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 .self {
@@ -146,19 +153,23 @@ span {
   color: gray;
   margin-top: 50px;
   font-family: 'Roboto Mono', monospace;
+  letter-spacing: 3px;
+  line-height: 27px;
 }
 
 .see-more {
+  display: block;
   color: white;
   background-color: transparent;
   border: 1px solid white;
   width: fit-content;
   padding: 10px 25px;
-  margin-left: 40px;
-  margin-top: 190px;
+  margin-left: 10px;
+  margin-top: 120px;
   font-size: 15px;
   white-space: nowrap;
   font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
 }
 
 .card {
@@ -169,6 +180,7 @@ span {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   overflow: hidden;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .card:hover {
@@ -297,12 +309,11 @@ span {
   display: inline-block;
   overflow: hidden;
   letter-spacing: 2px;
-  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
   white-space: nowrap;
-  font-size: 30px;
   font-weight: 700;
-  border-right: 4px solid #ffb800;
-  box-sizing: border-box;
+  border-right: 4px solid #ecad0e;
+
   padding-right: 5px;
 }
 
@@ -323,7 +334,7 @@ span {
   }
 
   50% {
-    border-color: #ffb800;
+    border-color: #ecad0e;
   }
 }
 
@@ -339,7 +350,7 @@ span {
   padding: 10px;
   border-radius: 50%;
   transition: display 2s;
-  background-color: #ffb800;
+  background-color: #ecad0e;
 }
 
 #toTop:hover {
@@ -348,4 +359,58 @@ span {
 
 .scroll-position {
   padding-bottom: 90px;
+}
+
+@media screen and (max-width: 860px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .section {
+    overflow: hidden;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    margin-left: 20px;
+    margin-top: 130px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+  }
+
+  .header.active {
+    height: 100%;
+  }
+
+  .header {
+    transition: height 1s ease;
+  }
+
+  .nav-links li {
+    float: none;
+    text-align: center;
+  }
+
+  .cv-wrapper {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
 }

@@ -11,26 +11,53 @@
       href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Benkosh - Web Developer</title>
   </head>
   <body>
-
-    <img src="./chevron.png" href="#" id="toTop" title="Go to top"></img>
+    <img src="./chevron.png" href="#" id="toTop" title="Go to top" />
 
     <div class="header" id="myHeader">
-
       <nav class="navbar">
-        <img height="75px"class="logo" src="./asd.png" alt="">
-        <ul class="nav-links">
-          <li> <a href="#" class="nav-link selected" id="about-btn"
-            >ABOUT</a
-          ></li>
-          <li><a href="#scroll2" class="nav-link not-selected" >My Skillset</a></li>
-          <li><a href="#scroll3" class="nav-link not-selected" data-scrollY="2199">My projects</a></li>
-          <li><a href="#scroll4" class="nav-link not-selected" data-scrollY="2199">Contact</a></li>
-        </ul>
+        <div class="logo-wrapper">
+          <img height="70px" class="logo" src="./KoshoLogo.svg" alt="" />
+        </div>
+
+        <div class="toggle-button">
+          <span class="hbar"></span>
+          <span class="hbar"></span>
+          <span class="hbar"></span>
+        </div>
+        <div class="navbar-links">
+          <ul class="nav-links">
+            <li>
+              <a href="#" class="nav-link selected" id="about-btn">ABOUT</a>
+            </li>
+            <li>
+              <a href="#scroll2" class="nav-link not-selected">My Skillset</a>
+            </li>
+            <li>
+              <a
+                href="#scroll3"
+                class="nav-link not-selected"
+                data-scrollY="2199"
+                >My projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#scroll4"
+                class="nav-link not-selected"
+                data-scrollY="2199"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="cv-wrapper">
         <a class="cv glowButton">DOWNLOAD CV</a>
@@ -38,19 +65,25 @@
     </div>
 
     <div id="section1" class="section">
-      <div class="left">
       <div class="hero">
         <p class="hey">👋 Hey There...</p>
-        <p class="me">I'm <span>Ben Koshrovski</span>, a <br/>Full-Stack Developer from TLV</p>
-        <p class="self">Self taught Full-Stack web developer experienced <br/> with building websites and web applications.</p>
+        <p class="me">
+          I'm <span class="orange">Ben Koshrovski</span>, a<br />
+          Full-Stack Developer from TLV
+        </p>
+        <p class="self">
+          Self taught Full-Stack web developer experienced <br />
+          with building websites and web applications.
+        </p>
+        <a class="see-more" href="#scroll2">See What I Can Do ▼</a>
       </div>
-      <a class="see-more">See What I Can Do ▼</a>
-        </div>
-        <div class="right">
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-          <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-      </div>
-      </div>
+      <lottie-player
+        src="https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json"
+        speed="1"
+        loop
+        autoplay
+        class="gif"
+      ></lottie-player>
     </div>
 
     <div id="scroll2" class="scroll-position"></div>
@@ -94,10 +127,9 @@
 
     <div id="scroll4" class="scroll-position"></div>
     <div id="section4" class="section">
-      <p class="contact">
-       Contact me
-      </p>
+      <p class="contact">Contact me</p>
     </div>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
