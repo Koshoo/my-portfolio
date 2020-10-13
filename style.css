@@ -48,9 +48,6 @@ body {
   margin-top: 25px;
 }
 
-.logo {
-}
-
 .navbar {
   display: flex;
   width: 80%;
@@ -103,7 +100,7 @@ li {
 .toggle-button {
   position: absolute;
   top: 40px;
-  right: 50px;
+  right: 30px;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -130,8 +127,9 @@ li {
 
 .hero {
   color: white;
-  margin-top: 25vh;
-  margin-left: 40px;
+  margin-top: 160px;
+  margin-left: 80px;
+  width: 50%;
 }
 
 .hey {
@@ -141,11 +139,20 @@ li {
 }
 
 .me {
-  width: 769px;
   font-family: 'Roboto Slab';
   font-size: 40px;
   font-weight: 500;
   line-height: 1.65;
+}
+
+.gif-wrapper {
+  width: 40%;
+  position: absolute;
+  right: 20px;
+  top: 170px;
+}
+.gif {
+  max-width: 500px;
 }
 
 .self {
@@ -165,7 +172,7 @@ li {
   width: fit-content;
   padding: 10px 25px;
   margin-left: 10px;
-  margin-top: 120px;
+  margin-top: 200px;
   font-size: 15px;
   white-space: nowrap;
   font-family: 'Roboto Mono', monospace;
@@ -313,7 +320,6 @@ li {
   white-space: nowrap;
   font-weight: 700;
   border-right: 4px solid #ecad0e;
-
   padding-right: 5px;
 }
 
@@ -349,16 +355,7 @@ li {
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
-  transition: display 2s;
   background-color: #ecad0e;
-}
-
-#toTop:hover {
-  background-color: #555;
-}
-
-.scroll-position {
-  padding-bottom: 90px;
 }
 
 @media screen and (max-width: 860px) {
@@ -412,5 +409,40 @@ li {
 
   .nav-links.active {
     display: block;
+  }
+
+  .me {
+    font-size: 25px;
+    margin: 0 20px;
+  }
+
+  .orange {
+    background-color: transparent;
+    color: orange;
+    padding: 0;
+  }
+
+  .gif-wrapper {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .hero {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .see-more {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 60px;
   }
 }

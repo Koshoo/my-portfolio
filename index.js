@@ -7,6 +7,7 @@ const seeMoreButton = document.querySelector('.see-more');
 
 const toggleButton = document.querySelector('.toggle-button');
 const navlinks = document.querySelectorAll('.nav-links')[0];
+
 const removeHash = () => {
   history.pushState(
     '',
@@ -57,6 +58,11 @@ const loopOverTypeWriter = (options) => {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('scroll', () => {
+  if (header.classList.contains('active')) {
+    navlinks.classList.toggle('active');
+    header.classList.toggle('active');
+    header.style.backgroundColor = 'none';
+  }
   if (window.scrollY > 50) {
     goToTopButton.style.display = 'block';
   } else {
