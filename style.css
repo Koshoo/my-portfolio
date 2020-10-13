@@ -32,13 +32,21 @@ body {
 
 .cv-wrapper {
   width: 10%;
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+.download-icon {
+  margin-right: 8px;
 }
 
 .cv {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
   background-color: #ecad0e;
-  border-radius: 10px;
-  padding: 5px 25px;
+  font-size: 12px;
+  color: white;
+  border-radius: 7px;
+  padding: 8px 23px;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -127,7 +135,7 @@ li {
 
 .hero {
   color: white;
-  margin-top: 160px;
+  margin-top: 240px;
   margin-left: 80px;
   width: 50%;
 }
@@ -149,10 +157,10 @@ li {
   width: 40%;
   position: absolute;
   right: 20px;
-  top: 170px;
+  top: 200px;
 }
 .gif {
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .self {
@@ -172,7 +180,7 @@ li {
   width: fit-content;
   padding: 10px 25px;
   margin-left: 10px;
-  margin-top: 200px;
+  margin-top: 170px;
   font-size: 15px;
   white-space: nowrap;
   font-family: 'Roboto Mono', monospace;
@@ -395,7 +403,7 @@ li {
   }
 
   .header {
-    transition: height 1s ease;
+    transition: height 0.5s ease-in-out;
   }
 
   .nav-links li {
@@ -436,6 +444,7 @@ li {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 140px;
   }
 
   .see-more {
