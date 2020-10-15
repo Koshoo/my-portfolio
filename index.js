@@ -98,3 +98,28 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 //     if (count >= options.length) count = 0;
 //   }, 5000);
 // };
+
+// Get the modal
+var modal = document.querySelector('.modal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.querySelectorAll('.screenshot');
+var modalImg = document.querySelector('#modal-image');
+var captionText = document.getElementById('caption');
+imgs.forEach((img) => {
+  img.onclick = function () {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    header.style.visibility = 'hidden';
+  };
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = 'none';
+  header.style.visibility = 'visible';
+};
