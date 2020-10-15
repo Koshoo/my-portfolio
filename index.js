@@ -1,13 +1,14 @@
+// Query selectors
 const header = document.querySelector('.header');
 const aboutBtn = document.querySelector('#about-btn');
 const navButtons = document.querySelectorAll('.nav-link');
 const goToTopButton = document.querySelector('#toTop');
 const typeWriterText = document.querySelector('.typewriter-text');
 const seeMoreButton = document.querySelector('.see-more');
+const toggleButton = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list');
 
-const toggleButton = document.querySelector('.toggle-button');
-const navlinks = document.querySelectorAll('.nav-links')[0];
-
+//  make url always stay the same
 const removeHash = () => {
   history.pushState(
     '',
@@ -17,12 +18,27 @@ const removeHash = () => {
 };
 
 const handleScroll = (e) => {
-  const { scrollY } = e.path[1];
-  const header = document.querySelector('.header');
-  if (scrollY === 0) header.style.backgroundColor = 'black';
-  else {
-    // header.style.backgroundColor = '#ecad0e';
-    header.style.backgroundColor = 'black';
+  // Hide mobile menu on scroll
+  if (header.classList.contains('active')) {
+    navList.classList.toggle('active');
+    header.classList.toggle('active');
+    header.style.backgroundColor = 'none';
+  }
+
+  // Show go to top button when scrolling down a bit.
+  scrollY > 100
+    ? (goToTopButton.style.display = 'block')
+    : (goToTopButton.style.display = 'none');
+
+  // Figure out which navbar link should be active based on scrollY
+  if (scrollY < 200) {
+    setSelected(navButtons[0]);
+  } else if (scrollY >= 200 && scrollY < 800) {
+    setSelected(navButtons[1]);
+  } else if (scrollY >= 800 && scrollY < 1500) {
+    setSelected(navButtons[2]);
+  } else {
+    setSelected(navButtons[3]);
   }
 };
 
@@ -35,58 +51,50 @@ const setSelected = (toSelect) => {
   toSelect.classList.add('selected');
 };
 
-const typewriterOptions = [
-  'Full-Stack Web Developer',
-  'Thinker',
-  'Imaginer',
-  'Team Player'
-];
-
-const loopOverTypeWriter = (options) => {
-  let count = 1;
-  setInterval(() => {
-    typeWriterText.innerHTML = options[count];
-    typeWriterText.style.animation = 'none';
-    typeWriterText.offsetHeight; /* trigger reflow */
-    typeWriterText.style.animation = null;
-    typeWriterText.style.animationDuration = '1s';
-    count++;
-    if (count >= options.length) count = 0;
-  }, 5000);
+const handleNavButtonClick = () => {
+  setSelected(navButton);
+  if (header.classList.contains('active')) {
+    header.classList.toggle('active');
+    navList.classList.toggle('active');
+  }
 };
-// loopOverTypeWriter(typewriterOptions);
+
+navButtons.forEach((navButton) => {
+  navButton.addEventListener('click', handleNavButtonClick);
+});
+
+seeMoreButton.addEventListener('click', () => setSelected(navButtons[1]));
 
 window.addEventListener('scroll', handleScroll);
-window.addEventListener('scroll', () => {
-  if (header.classList.contains('active')) {
-    navlinks.classList.toggle('active');
-    header.classList.toggle('active');
-    header.style.backgroundColor = 'none';
-  }
-  if (window.scrollY > 50) {
-    goToTopButton.style.display = 'block';
-  } else {
-    goToTopButton.style.display = 'none';
-  }
-});
 window.addEventListener('hashchange', removeHash);
 window.addEventListener('load', () => window.scrollTo(0, 0));
 
 goToTopButton.addEventListener('click', () => window.scrollTo(0, 0));
 
-navButtons.forEach((navButton) => {
-  navButton.addEventListener('click', () => {
-    setSelected(navButton);
-    if (header.classList.contains('active')) {
-      header.classList.toggle('active');
-      navlinks.classList.toggle('active');
-    }
-  });
-});
-seeMoreButton.addEventListener('click', () => setSelected(navButtons[1]));
-
 toggleButton.addEventListener('click', () => {
-  navlinks.classList.toggle('active');
+  setTimeout(() => {
+    navList.classList.toggle('active');
+  }, 300);
   header.classList.toggle('active');
   header.style.backgroundColor = 'black';
 });
+
+// const typewriterOptions = [
+//   'Full-Stack Web Developer',
+//   'Thinker',
+//   'Imaginer',
+//   'Team Player'
+// ];
+
+// const loopOverTypeWriter = (options) => {
+//   let count = 1;
+//   setInterval(() => {
+//     typeWriterText.innerHTML = options[count];
+//     typeWriterText.style.animation = 'none';
+//     typeWriterText.offsetHeight; /* trigger reflow */
+//     typeWriterText.style.animation = null;
+//     typeWriterText.style.animationDuration = '1s';
+//     count++;
+//     if (count >= options.length) count = 0;
+//   }, 5000);
+// };

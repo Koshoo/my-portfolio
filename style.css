@@ -24,15 +24,12 @@ body {
   width: 100%;
   height: 90px;
   align-items: center;
+  background-color: black;
 }
 
 .section {
   height: 100%;
-}
-
-.cv-wrapper {
-  width: 10%;
-  margin-top: 10px;
+  overflow: hidden;
 }
 
 .download-icon {
@@ -41,14 +38,16 @@ body {
 
 .cv {
   font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  background-color: #ecad0e;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 13px;
   color: white;
   border-radius: 7px;
-  padding: 8px 23px;
-  white-space: nowrap;
+  padding: 12px 29px;
   cursor: pointer;
+  width: 201px;
+  height: 50px;
+  box-shadow: 0 14px 48px 0 rgba(255, 184, 0, 0.39);
+  background-color: #ffb800;
 }
 
 .logo-wrapper {
@@ -63,7 +62,7 @@ body {
   align-items: center;
 }
 
-.nav-links {
+.nav-list {
   list-style-type: none;
   text-transform: uppercase;
 }
@@ -81,7 +80,7 @@ li {
 }
 
 .orange {
-  background-color: #ecad0e;
+  background-color: #ffb800;
   border-radius: 5px;
   padding: 5px 17px;
 }
@@ -89,7 +88,7 @@ li {
 .nav-link.not-selected:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #ecad0e;
+  border-bottom: solid 3px #ffb800;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -97,7 +96,7 @@ li {
 .nav-link.selected:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #ecad0e;
+  border-bottom: solid 3px #ffb800;
 }
 
 .nav-link:hover:after {
@@ -105,7 +104,7 @@ li {
   transform-origin: 50%;
 }
 
-.toggle-button {
+.hamburger {
   position: absolute;
   top: 40px;
   right: 30px;
@@ -114,6 +113,7 @@ li {
   justify-content: space-between;
   width: 38px;
   height: 26px;
+  cursor: pointer;
 }
 
 .hbar {
@@ -160,7 +160,7 @@ li {
   top: 200px;
 }
 .gif {
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .self {
@@ -177,10 +177,10 @@ li {
   color: white;
   background-color: transparent;
   border: 1px solid white;
+  text-decoration: none;
   width: fit-content;
   padding: 10px 25px;
-  margin-left: 10px;
-  margin-top: 170px;
+  margin-top: 5vh;
   font-size: 15px;
   white-space: nowrap;
   font-family: 'Roboto Mono', monospace;
@@ -188,23 +188,19 @@ li {
 }
 
 .card {
-  padding: 20px 0 30px;
-  width: 70%;
-  height: 80%;
-  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  margin: 70px 30px;
+  padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  overflow: hidden;
   font-family: 'Noto Sans JP', sans-serif;
+  background-color: white;
+  height: 80%;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.about-container {
-  width: 70%;
-  margin: 0 auto;
 }
 
 .about {
@@ -221,34 +217,69 @@ li {
   margin-top: 0;
 }
 
-.skill-set-container {
-  width: 70%;
-  margin: 0 auto;
+/* .typewriter {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-@keyframes load {
-  from {
-    width: 0%;
-  }
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  font-weight: 700;
+  border-right: 4px solid #ffb800;
+  padding-right: 5px;
+} */
+
+/* Make sure that padding behaves as expected */
+* {
+  box-sizing: border-box;
 }
 
-@-webkit-keyframes load {
-  from {
-    width: 0%;
-  }
+/* Container for skill bars */
+
+.skills {
+  text-align: center; /* Right-align text */
+  padding: 8px 0;
+  line-height: 70%;
+  color: white; /* White text color */
+  border-radius: 20px;
 }
 
-@-moz-keyframes load {
-  from {
-    width: 0%;
-  }
+.html {
+  width: 45%;
+  background-color: #808080;
+} /* Green */
+.css {
+  width: 40%;
+  background-color: #808080;
+} /* Blue */
+.js {
+  width: 42.5%;
+  background-color: #808080;
+} /* Red */
+.php {
+  width: 40%;
+  background-color: #808080;
+} /* Dark Grey */
+
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ffb800;
 }
 
-@-o-keyframes load {
-  from {
-    width: 0%;
-  }
-}
+/* Keyframes */
 
 @keyframes line {
   0% {
@@ -262,73 +293,6 @@ li {
   100% {
     border-color: white;
   }
-}
-
-.bar {
-  background-color: #eee;
-  padding: 2px;
-  border-radius: 15px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.bar::before {
-  content: attr(data-skill);
-  background-color: #f3b0ff;
-  display: inline-block;
-  padding: 5px 0 5px 10px;
-  border-radius: inherit;
-  animation: load 2s 0s;
-  -webkit-animation: load 2s 0s;
-  -moz-animation: load 2s 0s;
-  -o-animation: load 2s 0s;
-}
-
-.bar.front::before {
-  background-color: #ffcc33;
-}
-
-.bar.back::before {
-  background-color: #a6cfe3;
-}
-
-.bar.learning::before {
-  width: calc(20% - 10px);
-}
-
-.bar.basic::before {
-  width: calc(40% - 10px);
-}
-
-.bar.intermediate::before {
-  width: calc(60% - 10px);
-}
-
-.bar.advanced::before {
-  width: calc(80% - 10px);
-}
-
-.bar.expert::before {
-  width: calc(100% - 10px);
-}
-
-.typewriter {
-  display: inline-block;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-.typewriter-text {
-  display: inline-block;
-  overflow: hidden;
-  letter-spacing: 2px;
-  animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
-  white-space: nowrap;
-  font-weight: 700;
-  border-right: 4px solid #ecad0e;
-  padding-right: 5px;
 }
 
 @keyframes typing {
@@ -348,26 +312,14 @@ li {
   }
 
   50% {
-    border-color: #ecad0e;
+    border-color: #ffb800;
   }
 }
 
-#toTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: #ecad0e;
-}
+/* Mobile */
 
 @media screen and (max-width: 860px) {
-  .toggle-button {
+  .hamburger {
     display: flex;
   }
 
@@ -375,7 +327,7 @@ li {
     overflow: hidden;
   }
 
-  .nav-links {
+  .nav-list {
     display: none;
     width: 100%;
   }
@@ -403,10 +355,10 @@ li {
   }
 
   .header {
-    transition: height 0.5s ease-in-out;
+    transition: height 0.6s ease-in-out;
   }
 
-  .nav-links li {
+  .nav-list li {
     float: none;
     text-align: center;
   }
@@ -415,13 +367,13 @@ li {
     display: none;
   }
 
-  .nav-links.active {
+  .nav-list.active {
     display: block;
   }
 
   .me {
     font-size: 25px;
-    margin: 0 20px;
+    margin: 20px 20px;
   }
 
   .orange {
@@ -434,8 +386,7 @@ li {
     position: relative;
     right: auto;
     top: auto;
-    margin: 0 auto;
-    padding-top: 30px;
+    margin: 30px auto;
   }
 
   .hero {
@@ -446,12 +397,17 @@ li {
     flex-direction: column;
     margin-top: 140px;
   }
+  .self {
+    margin-top: 10px;
+  }
 
   .see-more {
-    position: absolute;
     margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 60px;
+  }
+
+  #toTop {
+    right: 10px;
+    height: 40px;
+    width: 40px;
   }
 }

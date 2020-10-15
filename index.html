@@ -27,44 +27,41 @@
   <body>
     <img src="./chevron.png" href="#" id="toTop" title="Go to top" />
 
-    <div class="header" id="myHeader">
+    <div class="header">
       <nav class="navbar">
         <div class="logo-wrapper">
-          <img height="70px" class="logo" src="./KoshoLogo.svg" alt="" />
+          <img
+            height="70px"
+            class="logo"
+            src="./KoshoLogo.svg"
+            alt="kosho logo"
+          />
         </div>
 
-        <div class="toggle-button">
+        <div class="hamburger">
           <span class="hbar"></span>
           <span class="hbar"></span>
           <span class="hbar"></span>
         </div>
-        <div class="navbar-links">
-          <ul class="nav-links">
+
+        <div>
+          <ul class="nav-list">
             <li>
               <a href="#" class="nav-link selected" id="about-btn">ABOUT</a>
             </li>
             <li>
-              <a href="#scroll2" class="nav-link not-selected">My Skillset</a>
+              <a href="#scroll1" class="nav-link not-selected">My Skillset</a>
             </li>
             <li>
-              <a
-                href="#scroll3"
-                class="nav-link not-selected"
-                data-scrollY="2199"
-                >My projects</a
-              >
+              <a href="#scroll2" class="nav-link not-selected">My projects</a>
             </li>
             <li>
-              <a
-                href="#scroll4"
-                class="nav-link not-selected"
-                data-scrollY="2199"
-                >Contact</a
-              >
+              <a href="#scroll3" class="nav-link not-selected">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
+
       <div class="cv-wrapper">
         <a class="cv glowButton">
           <i class="fas fa-file-download download-icon"></i>DOWNLOAD CV</a
@@ -76,8 +73,8 @@
       <div class="hero">
         <p class="hey">👋 Hey There...</p>
         <p class="me">
-          I'm <span class="orange">Ben Koshrovski</span>, a Full-Stack Developer
-          from TLV
+          I'm <span class="orange">Ben Koshrovski</span>, a Full-Stack Web
+          Developer from TLV
         </p>
         <p class="self">
           Self taught Full-Stack web developer experienced <br />
@@ -92,38 +89,51 @@
             class="gif"
           ></lottie-player>
         </div>
-        <a class="see-more" href="#scroll2">See What I Can Do ▼</a>
+        <a class="see-more" href="#scroll1">See What I Can Do ▼</a>
+      </div>
+    </div>
+
+    <div id="scroll1" class="scroll-position"></div>
+    <div id="section2" class="section">
+      <div class="card">
+        <div class="about-container">
+          <h3 class="about-title">About me</h3>
+          <p class="about">
+            When I first discovered Web Deveolopment, I was instantly hooked.<br />
+            I am passionate about building Web Applications using mainly
+            Javascript.<br />
+            Self taught for over 2 years in the most recent and relavent
+            languages and frameworks, such as HTML, CSS, Javascript, React JS,
+            Node.js, Express and MongoDB.<br />
+            Highly motivated to keep developing and learning. <br />A TEAM
+            PLAYER!
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <h3 class="skills-title">My Skills</h3>
+          <p>HTML</p>
+          <div class="skills html">90%</div>
+
+          <p>CSS</p>
+          <div class="container">
+            <div class="skills css">80%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="container">
+            <div class="skills js">85%</div>
+          </div>
+
+          <p>Node.js</p>
+          <div class="container">
+            <div class="skills php">80%</div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="scroll2" class="scroll-position"></div>
-    <div id="section2" class="section">
-      <br />
-      <div class="card">
-        <div class="about-container">
-          <h2 class="about-title">About me</h2>
-          <p class="about">
-            When I first discovered Web Deveolopment, I was instantly hooked. I
-            am passionate about building Web Applications using mainly
-            Javascript. Self taught for over 2 years in the most recent and
-            relavent languages and frameworks, such as HTML, CSS, Javascript,
-            React JS, Node.js, Express and MongoDB. Highly motivated to keep
-            developing and learning. A TEAM PLAYER!
-          </p>
-        </div>
-        <div class="skill-set-container">
-          <h1>Skill Set</h1>
-          <div class="bar back advanced" data-skill="JavaScript"></div>
-          <div class="bar advanced" data-skill="React"></div>
-          <div class="bar advanced" data-skill="Node.js"></div>
-          <div class="bar back intermediate" data-skill="C#"></div>
-          <div class="bar front intermediate" data-skill="CSS3"></div>
-          <div class="bar front advanced" data-skill="HTML5"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="scroll3" class="scroll-position"></div>
     <div id="section3" class="section">
       <p class="projects-info">
         When I first discovered Web Deveolopment, I was instantly hooked. I am
@@ -135,10 +145,11 @@
       </p>
     </div>
 
-    <div id="scroll4" class="scroll-position"></div>
+    <div id="scroll3" class="scroll-position"></div>
     <div id="section4" class="section">
       <p class="contact">Contact me</p>
     </div>
+
     <script src="index.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
