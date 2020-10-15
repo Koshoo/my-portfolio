@@ -59,25 +59,25 @@ const handleNavButtonClick = () => {
   }
 };
 
-navButtons.forEach((navButton) => {
-  navButton.addEventListener('click', handleNavButtonClick);
-});
-
-seeMoreButton.addEventListener('click', () => setSelected(navButtons[1]));
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('hashchange', removeHash);
-window.addEventListener('load', () => window.scrollTo(0, 0));
-
-goToTopButton.addEventListener('click', () => window.scrollTo(0, 0));
-
-toggleButton.addEventListener('click', () => {
+const handleToggleButtonClick = () => {
   setTimeout(() => {
     navList.classList.toggle('active');
   }, 300);
   header.classList.toggle('active');
   header.style.backgroundColor = 'black';
+};
+
+// Event Listeners
+navButtons.forEach((navButton) => {
+  navButton.addEventListener('click', handleNavButtonClick);
 });
+seeMoreButton.addEventListener('click', () => setSelected(navButtons[1]));
+goToTopButton.addEventListener('click', () => window.scrollTo(0, 0));
+toggleButton.addEventListener('click', handleToggleButtonClick);
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('hashchange', removeHash);
+window.addEventListener('load', () => window.scrollTo(0, 0));
 
 // const typewriterOptions = [
 //   'Full-Stack Web Developer',

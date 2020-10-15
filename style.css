@@ -128,16 +128,13 @@ li {
   display: flex;
 }
 
-#section2 {
-  background-color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 .hero {
   color: white;
   margin-top: 240px;
   margin-left: 80px;
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hey {
@@ -182,9 +179,13 @@ li {
   padding: 10px 25px;
   margin-top: 5vh;
   font-size: 15px;
-  white-space: nowrap;
   font-family: 'Roboto Mono', monospace;
   cursor: pointer;
+}
+
+#section2 {
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .card {
@@ -323,18 +324,24 @@ li {
     display: flex;
   }
 
-  .section {
-    overflow: hidden;
+  .logo-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+  }
+
+  .header {
+    transition: height 0.6s ease-in-out;
+  }
+
+  .header.active {
+    height: 100%;
   }
 
   .nav-list {
     display: none;
     width: 100%;
-  }
-
-  .logo-wrapper {
-    margin-left: 20px;
-    margin-top: 130px;
   }
 
   .navbar {
@@ -343,36 +350,29 @@ li {
     margin-left: 20px;
   }
 
-  .logo-wrapper {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    margin: 0;
-  }
-
-  .header.active {
-    height: 100%;
-  }
-
-  .header {
-    transition: height 0.6s ease-in-out;
-  }
-
   .nav-list li {
     float: none;
     text-align: center;
+  }
+  .nav-list.active {
+    display: block;
   }
 
   .cv-wrapper {
     display: none;
   }
 
-  .nav-list.active {
-    display: block;
+  .hero {
+    display: flex;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 100px;
   }
 
   .me {
-    font-size: 25px;
+    font-size: 24px;
     margin: 20px 20px;
   }
 
@@ -382,23 +382,16 @@ li {
     padding: 0;
   }
 
+  .self {
+    margin-top: 5px;
+    font-size: 11px;
+  }
+
   .gif-wrapper {
     position: relative;
     right: auto;
     top: auto;
-    margin: 30px auto;
-  }
-
-  .hero {
-    margin-left: 0;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 140px;
-  }
-  .self {
-    margin-top: 10px;
+    margin: 0 auto;
   }
 
   .see-more {
