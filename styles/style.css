@@ -535,10 +535,17 @@ li {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-self: center;
+    width: 100%;
   }
+
   .about-title {
     align-self: center;
+  }
+
+  .about {
+    width: 15rem;
+    align-self: center;
+    font-size: 14px;
   }
 
   .skills-container {
@@ -549,7 +556,7 @@ li {
   }
 
   .container {
-    width: 300px;
+    width: 15rem;
   }
 
   #toTop {
