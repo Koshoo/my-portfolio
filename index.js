@@ -1,3 +1,6 @@
+//SITE IN DEVELOPMENT PROMPT
+alert('Hey! This site is still in development (October 2020)');
+
 // Query selectors
 const header = document.querySelector('.header');
 const aboutBtn = document.querySelector('#about-btn');
@@ -8,7 +11,14 @@ const seeMoreButton = document.querySelector('.see-more');
 const toggleButton = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 
-//  make url always stay the same
+// Modal query selectors
+const modal = document.querySelector('.modal');
+const closeModalButton = document.querySelector('.close');
+const images = document.querySelectorAll('.screenshot');
+const modalImg = document.querySelector('#modal-image');
+const captionText = document.querySelector('#caption');
+
+//  Make url always stay the same
 const removeHash = () => {
   history.pushState(
     '',
@@ -31,15 +41,15 @@ const handleScroll = (e) => {
     : (goToTopButton.style.display = 'none');
 
   // Figure out which navbar link should be active based on scrollY
-  if (scrollY < 200) {
-    setSelected(navButtons[0]);
-  } else if (scrollY >= 200 && scrollY < 800) {
-    setSelected(navButtons[1]);
-  } else if (scrollY >= 800 && scrollY < 1500) {
-    setSelected(navButtons[2]);
-  } else {
-    setSelected(navButtons[3]);
-  }
+  // if (scrollY < 200) {
+  //   setSelected(navButtons[0]);
+  // } else if (scrollY >= 200 && scrollY < 800) {
+  //   setSelected(navButtons[1]);
+  // } else if (scrollY >= 800 && scrollY < 1500) {
+  //   setSelected(navButtons[2]);
+  // } else {
+  //   setSelected(navButtons[3]);
+  // }
 };
 
 const setSelected = (toSelect) => {
@@ -51,7 +61,7 @@ const setSelected = (toSelect) => {
   toSelect.classList.add('selected');
 };
 
-const handleNavButtonClick = () => {
+const handleNavButtonClick = (navButton) => {
   setSelected(navButton);
   if (header.classList.contains('active')) {
     header.classList.toggle('active');
@@ -67,17 +77,36 @@ const handleToggleButtonClick = () => {
   header.style.backgroundColor = 'black';
 };
 
+function handleModal() {
+  modal.style.display = 'block';
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+  header.style.visibility = 'hidden';
+}
+
 // Event Listeners
 navButtons.forEach((navButton) => {
-  navButton.addEventListener('click', handleNavButtonClick);
+  navButton.addEventListener('click', () => handleNavButtonClick(navButton));
 });
 seeMoreButton.addEventListener('click', () => setSelected(navButtons[1]));
 goToTopButton.addEventListener('click', () => window.scrollTo(0, 0));
 toggleButton.addEventListener('click', handleToggleButtonClick);
 
+images.forEach((image) => {
+  image.addEventListener('click', handleModal);
+});
+
+// When the user clicks on (x), close the modal
+closeModalButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+  header.style.visibility = 'visible';
+});
+
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
 window.addEventListener('load', () => window.scrollTo(0, 0));
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
 
 // const typewriterOptions = [
 //   'Full-Stack Web Developer',
@@ -98,28 +127,3 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 //     if (count >= options.length) count = 0;
 //   }, 5000);
 // };
-
-// Get the modal
-var modal = document.querySelector('.modal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var imgs = document.querySelectorAll('.screenshot');
-var modalImg = document.querySelector('#modal-image');
-var captionText = document.getElementById('caption');
-imgs.forEach((img) => {
-  img.onclick = function () {
-    modal.style.display = 'block';
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-    header.style.visibility = 'hidden';
-  };
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName('close')[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = 'none';
-  header.style.visibility = 'visible';
-};
