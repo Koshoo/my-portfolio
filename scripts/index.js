@@ -1,5 +1,5 @@
 //SITE IN DEVELOPMENT PROMPT
-alert('Hey! This site is still in development (October 2020)');
+// alert('Hey! This site is still in development (October 2020)');
 
 // Query selectors
 const header = document.querySelector('.header');
@@ -104,7 +104,7 @@ closeModalButton.addEventListener('click', () => {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
-window.addEventListener('load', () => window.scrollTo(0, 0));
+// window.addEventListener('load', () => window.scrollTo(0, 0));
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 

@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400&family=Roboto+Slab:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Benkosh - Web Developer</title>
   </head>
   <body>
@@ -33,7 +33,7 @@
           <img
             width="120px"
             class="logo"
-            src="./assets/KoshoLogo1.svg"
+            src="./assets/KoshoLogo.svg"
             alt="benkosh logo"
           />
         </div>
@@ -100,20 +100,23 @@
           <h3 class="about-title">About me</h3>
           <p class="about">
             When I first discovered Web Deveolopment, I was instantly hooked.<br />
-            I am passionate about building Web Applications using mainly
+            I'm passionate about developing Web Applications using mainly
             Javascript.<br />
             Self taught for over 2 years in the most recent and relavent
-            languages and frameworks, such as HTML, CSS, Javascript, React JS,
-            Node.js, Express and MongoDB.<br />
+            languages and frameworks,<br />
+            such as HTML, CSS, Javascript, React JS, Node.js, Express and
+            MongoDB.<br />
             Highly motivated to keep developing and learning. <br />A TEAM
             PLAYER!
           </p>
         </div>
 
         <div class="skills-container">
-          <h3 class="skills-title">My Skills</h3>
+          <h3 class="skills-title about-title">My Skills</h3>
           <p>HTML</p>
-          <div class="skills html">90%</div>
+          <div class="container">
+            <div class="skills html">90%</div>
+          </div>
 
           <p>CSS</p>
           <div class="container">
@@ -125,9 +128,14 @@
             <div class="skills js">85%</div>
           </div>
 
+          <p>React</p>
+          <div class="container">
+            <div class="skills react">80%</div>
+          </div>
+
           <p>Node.js</p>
           <div class="container">
-            <div class="skills php">80%</div>
+            <div class="skills node">80%</div>
           </div>
         </div>
       </div>
@@ -188,7 +196,7 @@
       <p class="contact">Contact me</p>
     </div>
 
-    <script src="index.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
