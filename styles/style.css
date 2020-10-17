@@ -390,6 +390,7 @@ li {
   border-bottom: solid 3px #ffb800;
   width: fit-content;
   margin: 30px auto;
+  margin-bottom: 20px;
 }
 
 .contact-form {
@@ -443,6 +444,10 @@ li {
   margin-top: 8px;
   border: 0;
   padding: 7px;
+}
+
+.made-by {
+  text-align: center;
 }
 
 #toTop {
@@ -622,6 +627,12 @@ li {
 
   .modal-content {
     width: 100%;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px 20px;
   }
 
   #toTop {
