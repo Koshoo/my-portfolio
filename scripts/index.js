@@ -79,7 +79,7 @@ const handleToggleButtonClick = () => {
 
 function handleModal() {
   modal.style.display = 'block';
-  modalImg.src = this.src;
+  modalImg.src = this.dataset.url;
   captionText.innerHTML = this.alt;
   header.style.visibility = 'hidden';
 }
@@ -98,6 +98,10 @@ images.forEach((image) => {
 
 // When the user clicks on (x), close the modal
 closeModalButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+  header.style.visibility = 'visible';
+});
+modal.addEventListener('click', () => {
   modal.style.display = 'none';
   header.style.visibility = 'visible';
 });

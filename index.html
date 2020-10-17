@@ -29,7 +29,7 @@
 
     <div class="header">
       <nav class="navbar">
-        <div class="logo-wrapper">
+        <div class="logo-container">
           <img
             width="120px"
             class="logo"
@@ -61,7 +61,7 @@
           </ul>
         </div>
 
-        <div class="cv-wrapper">
+        <div class="cv-container">
           <a class="cv glowButton">
             <i class="fas fa-file-download download-icon"></i>DOWNLOAD CV</a
           >
@@ -73,14 +73,14 @@
       <div class="hero">
         <p class="hey">👋 Hey There...</p>
         <p class="me">
-          I'm <span class="orange">Ben Koshrovski</span>, a Full-Stack Web
-          Developer from TLV
+          I'm <span class="orange">Ben Koshrovski</span>, a Full-Stack<br />
+          Web Developer from TLV
         </p>
         <p class="self">
           Self taught Full-Stack web developer experienced <br />
           with building websites and web applications.
         </p>
-        <div class="gif-wrapper">
+        <div class="gif-container">
           <lottie-player
             src="https://assets8.lottiefiles.com/private_files/lf30_WdTEui.json"
             speed="1"
@@ -114,27 +114,27 @@
         <div class="skills-container">
           <h3 class="skills-title about-title">My Skills</h3>
           <p>HTML</p>
-          <div class="container">
+          <div class="skill-container">
             <div class="skills html">90%</div>
           </div>
 
           <p>CSS</p>
-          <div class="container">
+          <div class="skill-container">
             <div class="skills css">80%</div>
           </div>
 
           <p>JavaScript</p>
-          <div class="container">
+          <div class="skill-container">
             <div class="skills js">85%</div>
           </div>
 
           <p>React</p>
-          <div class="container">
+          <div class="skill-container">
             <div class="skills react">80%</div>
           </div>
 
           <p>Node.js</p>
-          <div class="container">
+          <div class="skill-container">
             <div class="skills node">80%</div>
           </div>
         </div>
@@ -145,45 +145,53 @@
     <div id="section3" class="section">
       <div class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image" alt="sadfasdf" />
+
+        <iframe
+          class="modal-content"
+          id="modal-image"
+          title="description"
+        ></iframe>
         <div id="caption"></div>
       </div>
 
-      <p class="projects-info">These are my project bla bla</p>
+      <h2 class="projects-title">My Projects</h2>
       <div class="projects">
         <div class="project">
-          <p class="project-description">Calculator</p>
           <img
             src="./assets/project-screenshots/calculator.png"
             class="screenshot"
             alt="A Simple Calculator built using HTML, CSS and Vanilla Javascript"
+            data-url="https://koshoo.github.io/Calculator/"
           />
-          <p class="description">Vanilla JS</p>
-          <a href="https://koshoo.github.io/Calculator/" target="_blank"
-            >View</a
-          >
+          <p class="project-title">Calculator</p>
+          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+          <a href="https://koshoo.github.io/Calculator/" target="">Link</a>
         </div>
 
         <div class="project">
-          <p class="project-description">Metronome</p>
           <img
             src="./assets/project-screenshots/metronome.png"
             alt=""
             class="screenshot"
+            data-url="https://koshoo.github.io/metronome/"
           />
-          <p class="description">Vanilla Metronome</p>
-          <a href="https://koshoo.github.io/metronome/" target="_blank">View</a>
+          <p class="project-title">Metronome</p>
+          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+          <a href="https://koshoo.github.io/metronome/" target="">Link</a>
         </div>
 
         <div class="project">
-          <p class="project-description">Etch-A-Sketch</p>
           <img
             src="./assets/project-screenshots/etch-a-sketch.png"
             alt=""
             class="screenshot"
+            data-url="https://koshoo.github.io/etch-a-sketch/"
           />
-          <p class="description">Etch-A-Sketch Game</p>
-          <a href="https://koshoo.github.io/metronome/" target="_blank">View</a>
+
+          <p class="project-title">Etch-A-Sketch Drawing Game</p>
+          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+
+          <a href="https://koshoo.github.io/etch-a-sketch/">Link</a>
         </div>
         <div class="project">asdasd</div>
         <div class="project">asdasd</div>
@@ -193,7 +201,39 @@
 
     <div id="scroll3" class="scroll-position"></div>
     <div id="section4" class="section">
-      <p class="contact">Contact me</p>
+      <h2 class="contact-title">Contact Me</h2>
+      <form class="contact-form">
+        <div class="form-left">
+          <input
+            type="text"
+            id="input-name"
+            class="form-input"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            id="input-email"
+            placeholder="Email"
+            class="form-input"
+          />
+          <input
+            type="text"
+            id="input-subject"
+            class="form-input"
+            placeholder="Subject"
+          />
+        </div>
+        <div class="form-right half-form cf">
+          <textarea
+            name="message"
+            type="text"
+            id="input-message"
+            class="form-input"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" id="input-submit" />
+      </form>
     </div>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
