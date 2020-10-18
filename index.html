@@ -210,8 +210,6 @@
             class="form-input"
             placeholder="Name"
             name="name"
-            required
-            maxlength="100"
           />
           <input
             type="email"
@@ -219,8 +217,6 @@
             placeholder="Email"
             class="form-input"
             name="email"
-            required
-            maxlength="100"
           />
           <input
             type="text"
@@ -231,14 +227,6 @@
             maxlength="100"
           />
         </div>
-        <input
-          type="website"
-          id="input-website"
-          class="honey"
-          placeholder="website"
-          name="website"
-          maxlength="100"
-        />
         <div class="form-right half-form cf">
           <textarea
             name="message"
@@ -247,9 +235,15 @@
             class="form-input"
             placeholder="Message"
             name="message"
-            required
-            maxlength="1000"
           ></textarea>
+          <input
+            type="website"
+            id="input-website"
+            class="honey"
+            placeholder="website"
+            name="website"
+            maxlength="100"
+          />
         </div>
         <input type="submit" value="Submit" id="input-submit" />
       </form>
