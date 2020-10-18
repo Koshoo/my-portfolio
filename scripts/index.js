@@ -102,11 +102,11 @@ function error() {
 
 // handle the form submission event
 
-form.addEventListener('submit', function (ev) {
-  ev.preventDefault();
-  var data = new FormData(form);
-  ajax(form.method, form.action, data, success, error);
-});
+// form.addEventListener('submit', function (ev) {
+//   ev.preventDefault();
+//   var data = new FormData(form);
+//   ajax(form.method, form.action, data, success, error);
+// });
 
 // helper function for sending an AJAX request
 
