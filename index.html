@@ -47,13 +47,13 @@
         <div>
           <ul class="nav-list">
             <li>
-              <a href="#" class="nav-link selected" id="about-btn">ABOUT</a>
+              <a href="#" class="nav-link selected" id="about-btn">Home</a>
             </li>
             <li>
-              <a href="#scroll1" class="nav-link not-selected">My Skillset</a>
+              <a href="#scroll1" class="nav-link not-selected">About</a>
             </li>
             <li>
-              <a href="#scroll2" class="nav-link not-selected">My projects</a>
+              <a href="#scroll2" class="nav-link not-selected">My Projects</a>
             </li>
             <li>
               <a href="#scroll3" class="nav-link not-selected">Contact</a>
@@ -202,25 +202,34 @@
     <div id="scroll3" class="scroll-position"></div>
     <div id="section4" class="section">
       <h2 class="contact-title">Contact Me</h2>
-      <form class="contact-form">
+      <div id="form-status"></div>
+      <form
+        method="POST"
+        action="https://formspree.io/f/mwkwldna "
+        data-netlify="true"
+        class="contact-form"
+      >
         <div class="form-left">
           <input
             type="text"
             id="input-name"
             class="form-input"
             placeholder="Name"
+            name="name"
           />
           <input
             type="email"
             id="input-email"
             placeholder="Email"
             class="form-input"
+            name="email"
           />
           <input
             type="text"
             id="input-subject"
             class="form-input"
             placeholder="Subject"
+            name="subject"
           />
         </div>
         <div class="form-right half-form cf">
@@ -230,7 +239,11 @@
             id="input-message"
             class="form-input"
             placeholder="Message"
+            name="message"
           ></textarea>
+        </div>
+        <div class="field">
+          <div data-netlify-recaptcha="true"></div>
         </div>
         <input type="submit" value="Submit" id="input-submit" />
       </form>

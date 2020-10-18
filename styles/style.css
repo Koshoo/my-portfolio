@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  background-color: #f1f1f1;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -185,7 +186,7 @@ li {
 }
 
 #section2 {
-  background-color: #f7f7f7;
+  background-color: #f1f1f1;
   font-family: Helvetica, Arial, sans-serif;
   height: fit-content;
 }
@@ -207,6 +208,7 @@ li {
 
 .about-container {
   width: 50%;
+  padding-right: 20px;
 }
 
 .about-title {
@@ -252,7 +254,7 @@ li {
 }
 
 #section3 {
-  background-color: #f7f7f7;
+  background-color: #f1f1f1;
   font-family: Helvetica, Arial, sans-serif;
   height: fit-content;
 }
@@ -310,6 +312,9 @@ li {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+#scroll2 {
 }
 
 .projects-title {
@@ -632,7 +637,7 @@ li {
   .contact-form {
     max-width: 600px;
     text-align: center;
-    margin: 20px 20px;
+    padding: 10px;
   }
 
   #toTop {
