@@ -84,10 +84,6 @@ function handleModal() {
   header.style.visibility = 'hidden';
 }
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-});
-
 // Event Listeners
 navButtons.forEach((navButton) => {
   navButton.addEventListener('click', () => handleNavButtonClick(navButton));
@@ -100,9 +96,9 @@ images.forEach((image) => {
   image.addEventListener('click', handleModal);
 });
 
-// form.addEventListener('submit', (e) => {
-//   if (e.target[3].value !== '') e.preventDefault();
-// });
+form.addEventListener('submit', (e) => {
+  if (e.target[3].value !== '') e.preventDefault();
+});
 
 // When the user clicks on (x), close the modal
 closeModalButton.addEventListener('click', () => {
