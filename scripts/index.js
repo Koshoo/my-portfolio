@@ -1,5 +1,5 @@
 // SITE IN DEVELOPMENT PROMPT
-alert('Hey! This site is still in development (October 2020)');
+// alert('Hey! This site is still in development (October 2020)');
 
 // Query selectors
 const header = document.querySelector('.header');
@@ -100,6 +100,10 @@ images.forEach((image) => {
   image.addEventListener('click', handleModal);
 });
 
+form.addEventListener('submit', (e) => {
+  if (e.target[3].value !== '') e.preventDefault();
+});
+
 // When the user clicks on (x), close the modal
 closeModalButton.addEventListener('click', () => {
   modal.style.display = 'none';
@@ -112,7 +116,7 @@ modal.addEventListener('click', () => {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
-window.addEventListener('load', () => window.scrollTo(0, 0));
+// window.addEventListener('load', () => window.scrollTo(0, 0));
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 
