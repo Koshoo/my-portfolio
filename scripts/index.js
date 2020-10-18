@@ -97,7 +97,9 @@ images.forEach((image) => {
 });
 
 form.addEventListener('submit', (e) => {
-  if (e.target[3].value !== '') e.preventDefault();
+  if (e.target[4].value) {
+    e.preventDefault();
+  }
 });
 
 // When the user clicks on (x), close the modal
