@@ -1,5 +1,5 @@
 // SITE IN DEVELOPMENT PROMPT
-alert('Hey! This site is still in development (October 2020)');
+// alert('Hey! This site is still in development (October 2020)');
 
 // Query selectors
 const header = document.querySelector('.header');
@@ -11,12 +11,33 @@ const seeMoreButton = document.querySelector('.see-more');
 const toggleButton = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const form = document.querySelector('form');
+const social = document.querySelector('.social');
 // Modal query selectors
 const modal = document.querySelector('.modal');
 const closeModalButton = document.querySelector('.close');
 const images = document.querySelectorAll('.screenshot');
 const modalImg = document.querySelector('#modal-image');
 const captionText = document.querySelector('#caption');
+
+const elementInViewport = (ele) => {
+  let top = ele.offsetTop;
+  let left = ele.offsetLeft;
+  let width = ele.offsetWidth;
+  let height = ele.offsetHeight;
+
+  while (ele.offsetParent) {
+    ele = ele.offsetParent;
+    top += ele.offsetTop;
+    left += ele.offsetLeft;
+  }
+
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    top + height <= window.pageYOffset + window.innerHeight &&
+    left + width <= window.pageXOffset + window.innerWidth
+  );
+};
 
 //  Make url always stay the same
 const removeHash = () => {
@@ -32,6 +53,7 @@ const handleScroll = (e) => {
   if (header.classList.contains('active')) {
     navList.classList.toggle('active');
     header.classList.toggle('active');
+    social.classList.toggle('active');
     header.style.backgroundColor = 'none';
   }
 
@@ -40,16 +62,17 @@ const handleScroll = (e) => {
     ? (goToTopButton.style.display = 'block')
     : (goToTopButton.style.display = 'none');
 
-  // Figure out which navbar link should be active based on scrollY
-  // if (scrollY < 200) {
-  //   setSelected(navButtons[0]);
-  // } else if (scrollY >= 200 && scrollY < 800) {
-  //   setSelected(navButtons[1]);
-  // } else if (scrollY >= 800 && scrollY < 1500) {
-  //   setSelected(navButtons[2]);
-  // } else {
-  //   setSelected(navButtons[3]);
-  // }
+  // Figure out which navbar link should be active and set it as active
+
+  if (elementInViewport(document.querySelector('.about-title'))) {
+    setSelected(navButtons[1]);
+  } else if (elementInViewport(document.querySelector('#bla'))) {
+    setSelected(navButtons[2]);
+  } else if (elementInViewport(document.querySelector('.contact-title'))) {
+    setSelected(navButtons[3]);
+  } else if (elementInViewport(document.querySelector('.hey'))) {
+    setSelected(navButtons[0]);
+  }
 };
 
 const setSelected = (toSelect) => {
@@ -66,12 +89,14 @@ const handleNavButtonClick = (navButton) => {
   if (header.classList.contains('active')) {
     header.classList.toggle('active');
     navList.classList.toggle('active');
+    social.classList.toggle('active');
   }
 };
 
 const handleToggleButtonClick = () => {
   setTimeout(() => {
     navList.classList.toggle('active');
+    social.classList.toggle('active');
   }, 300);
   header.classList.toggle('active');
   header.style.backgroundColor = 'black';
@@ -114,7 +139,7 @@ modal.addEventListener('click', () => {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
-window.addEventListener('load', () => window.scrollTo(0, 0));
+// window.addEventListener('load', () => window.scrollTo(0, 0));
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 

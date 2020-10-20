@@ -44,23 +44,33 @@
           <span class="hbar"></span>
         </div>
 
-        <div>
-          <ul class="nav-list">
-            <li>
-              <a href="#" class="nav-link selected" id="about-btn">Home</a>
-            </li>
-            <li>
-              <a href="#scroll1" class="nav-link not-selected">About</a>
-            </li>
-            <li>
-              <a href="#scroll2" class="nav-link not-selected">My Projects</a>
-            </li>
-            <li>
-              <a href="#scroll3" class="nav-link not-selected">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="nav-link selected" id="about-btn">Home</a>
+          </li>
+          <li>
+            <a href="#scroll1" class="nav-link not-selected">About</a>
+          </li>
+          <li>
+            <a href="#scroll2" class="nav-link not-selected">My Projects</a>
+          </li>
+          <li>
+            <a href="#scroll3" class="nav-link not-selected">Contact</a>
+          </li>
+        </ul>
 
+        <div class="social">
+          <a
+            href="https://github.com/koshoo"
+            target="_blank"
+            class="fab fa-github social-icon"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ben-koshrovski-a54a081ab/"
+            target="_blank"
+            class="fab fa-linkedin social-icon"
+          ></a>
+        </div>
         <div class="cv-container">
           <a class="cv glowButton">
             <i class="fas fa-file-download download-icon"></i>DOWNLOAD CV</a
@@ -97,35 +107,36 @@
     <div id="section2" class="section">
       <div class="card">
         <div class="about-container">
-          <h3 class="about-title">About me</h3>
+          <h3 class="about-title">About Me</h3>
           <p class="about">
-            When I first discovered Web Deveolopment, I was instantly hooked.<br />
-            I'm passionate about developing Web Applications using mainly
-            Javascript.<br />
-            Self taught for over 2 years in the most recent and relavent
-            languages and frameworks,<br />
-            such as HTML, CSS, Javascript, React JS, Node.js, Express and
-            MongoDB.<br />
-            Highly motivated to keep developing and learning. <br />A TEAM
-            PLAYER!
+            I am a Full Stack Web Developer who loves to solve problems and face
+            challanges.<br /><br />
+            A self taught programmer with over 2 years of experience in
+            developing web applications,<br />
+            using the most recent and relavent languages and frameworks, such as
+            HTML, CSS, Javascript, TypeScript, React, Node.js, Express, MongoDB
+            and GraphQL. <br /><br />
+            Super motivated to keep developing and learning.
+            <br /><br />
+            Feel free to contact me through the form below.
           </p>
         </div>
 
         <div class="skills-container">
           <h3 class="skills-title about-title">My Skills</h3>
-          <p>HTML</p>
+          <p>HTML5</p>
           <div class="skill-container">
             <div class="skills html">90%</div>
           </div>
 
-          <p>CSS</p>
+          <p>CSS3</p>
           <div class="skill-container">
-            <div class="skills css">80%</div>
+            <div class="skills css">90%</div>
           </div>
 
           <p>JavaScript</p>
           <div class="skill-container">
-            <div class="skills js">85%</div>
+            <div class="skills js">90%</div>
           </div>
 
           <p>React</p>
@@ -135,13 +146,17 @@
 
           <p>Node.js</p>
           <div class="skill-container">
-            <div class="skills node">80%</div>
+            <div class="skills node">85%</div>
+          </div>
+
+          <p>Redux</p>
+          <div class="skill-container">
+            <div class="skills redux" id="scroll2">75%</div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="scroll2" class="scroll-position"></div>
     <div id="section3" class="section">
       <div class="modal">
         <span class="close">&times;</span>
@@ -158,13 +173,26 @@
       <div class="projects">
         <div class="project">
           <img
+            src=""
+            class="screenshot"
+            alt=""
+            data-url="https://koshoo.github.io/Calculator/"
+          />
+          <p class="project-title" id="bla">This Website 😅</p>
+          <p class="project-description">
+            Vanilla JS, HTML and CSS<br />using no frameworks
+          </p>
+          <a href="https://benkosh.com" target="">Link</a>
+        </div>
+        <div class="project">
+          <img
             src="./assets/project-screenshots/calculator.png"
             class="screenshot"
             alt="A Simple Calculator built using HTML, CSS and Vanilla Javascript"
             data-url="https://koshoo.github.io/Calculator/"
           />
           <p class="project-title">Calculator</p>
-          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+          <p class="project-description">Vanilla JS, HTML and CSS</p>
           <a href="https://koshoo.github.io/Calculator/" target="">Link</a>
         </div>
 
@@ -176,7 +204,7 @@
             data-url="https://koshoo.github.io/metronome/"
           />
           <p class="project-title">Metronome</p>
-          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+          <p class="project-description">Vanilla JS, HTML and CSS</p>
           <a href="https://koshoo.github.io/metronome/" target="">Link</a>
         </div>
 
@@ -189,71 +217,100 @@
           />
 
           <p class="project-title">Etch-A-Sketch Drawing Game</p>
-          <p class="project-description">Made using Vanilla JS, HTML and CSS</p>
+          <p class="project-description">Vanilla JS, HTML and CSS</p>
 
           <a href="https://koshoo.github.io/etch-a-sketch/">Link</a>
         </div>
-        <div class="project">asdasd</div>
-        <div class="project">asdasd</div>
+        <div class="project">
+          <img
+            src="./assets/project-screenshots/new-blog.png"
+            alt=""
+            class="screenshot"
+            data-url="https://stark-crag-28602.herokuapp.com/"
+          />
+
+          <p class="project-title">Blog App</p>
+          <p class="project-description">
+            React, Redux, MongoDB, Express and NodeJS
+          </p>
+
+          <a href="https://stark-crag-28602.herokuapp.com/">Link</a>
+        </div>
+        <div class="project blog-app">
+          <img
+            src="./assets/project-screenshots/new-blog.png"
+            alt=""
+            class="screenshot"
+            data-url="https://phonebook-kosho.herokuapp.com/"
+          />
+
+          <p class="project-title">PhoneBook</p>
+          <p class="project-description">
+            React, Redux, MongoDB, Express and NodeJS
+          </p>
+
+          <a href="https://stark-crag-28602.herokuapp.com/">Link</a>
+        </div>
         <div class="project">asdasd</div>
       </div>
     </div>
 
     <div id="scroll3" class="scroll-position"></div>
     <div id="section4" class="section">
-      <h2 class="contact-title">Contact Me</h2>
-      <form method="POST" data-netlify="true" class="contact-form">
-        <div class="form-left">
-          <input
-            type="text"
-            id="input-name"
-            class="form-input"
-            placeholder="Name"
-            name="name"
-            required
-            maxlength="100"
-          />
-          <input
-            type="email"
-            id="input-email"
-            placeholder="Email"
-            class="form-input"
-            name="email"
-            required
-            maxlength="100"
-          />
-          <input
-            type="text"
-            id="input-subject"
-            class="form-input"
-            placeholder="Subject"
-            name="subject"
-            maxlength="100"
-          />
-        </div>
-        <div class="form-right half-form cf">
-          <textarea
-            name="message"
-            type="text"
-            id="input-message"
-            class="form-input"
-            placeholder="Message"
-            name="message"
-            required
-            maxlength="1000"
-          ></textarea>
-          <input
-            type="website"
-            id="input-website"
-            class="honey"
-            placeholder="website"
-            name="website"
-          />
-        </div>
-        <input type="submit" value="Submit" id="input-submit" />
-      </form>
-
-      <p class="made-by">October 2020 Ben Koshrovski</p>
+      <div class="contact-container">
+        <h2 class="contact-title">Contact Me</h2>
+        <form method="POST" data-netlify="true" class="contact-form">
+          <div class="form-left">
+            <input
+              type="text"
+              id="input-name"
+              class="form-input"
+              placeholder="Name"
+              name="name"
+              required
+              maxlength="100"
+            />
+            <input
+              type="email"
+              id="input-email"
+              placeholder="Email"
+              class="form-input"
+              name="email"
+              required
+              maxlength="100"
+            />
+            <input
+              type="text"
+              id="input-subject"
+              class="form-input"
+              placeholder="Subject"
+              name="subject"
+              maxlength="100"
+            />
+          </div>
+          <div class="form-right half-form cf">
+            <textarea
+              name="message"
+              type="text"
+              id="input-message"
+              class="form-input"
+              placeholder="Message"
+              name="message"
+              required
+              maxlength="1000"
+            ></textarea>
+            <input
+              type="website"
+              id="input-website"
+              class="honey"
+              placeholder="website"
+              name="website"
+            />
+          </div>
+          <input type="submit" value="Submit" id="input-submit" />
+        </form>
+        <p class="made-by">2020 &copy; Ben Koshrovski</p>
+      </div>
     </div>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

@@ -50,10 +50,25 @@ body {
 
 .cv-container {
   margin-top: 7px;
+  flex-grow: 0.8;
 }
 
 .logo-container {
   margin-top: 22px;
+  margin-left: 80px;
+  flex-grow: 7;
+}
+
+.social {
+  margin-right: 20px;
+  margin-top: 12px;
+}
+
+.social-icon {
+  font-size: 35px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar {
@@ -66,6 +81,8 @@ body {
 .nav-list {
   list-style-type: none;
   text-transform: uppercase;
+  margin-top: 35px;
+  flex-grow: 4.5;
 }
 
 li {
@@ -225,11 +242,12 @@ li {
 
 .skills {
   text-align: right; /* Right-align text */
-  padding: 5px 0;
+  padding: 4px 0;
   line-height: 70%;
-  color: black; /* White text color */
+  color: rgb(214, 206, 206); /* White text color */
   font-weight: bolder;
   background-color: #0078ff;
+  font-size: 14px;
 }
 
 .skill-container {
@@ -239,18 +257,21 @@ li {
 
 .html {
   width: 90%;
-} /* Green */
+}
 .css {
-  width: 80%;
-} /* Blue */
+  width: 90%;
+}
 .js {
-  width: 85%;
-} /* Red */
+  width: 90%;
+}
 .node {
-  width: 80%;
-} /* Dark Grey */
+  width: 85%;
+}
 .react {
   width: 80%;
+}
+.redux {
+  width: 75%;
 }
 
 #section3 {
@@ -351,8 +372,8 @@ li {
 }
 
 .screenshot {
-  height: 50%;
-  width: 50%;
+  height: 200px;
+  width: 200px;
   margin: 0 auto;
 }
 
@@ -384,6 +405,7 @@ li {
 
 #section4 {
   background: #f1f1f1;
+  height: 100%;
 }
 
 .contact-title {
@@ -461,6 +483,7 @@ li {
 
 .made-by {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 #toTop {
@@ -525,16 +548,32 @@ li {
 
 /* Mobile */
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1100px) {
   .hamburger {
     display: flex;
   }
 
   .logo-container {
     position: absolute;
-    top: 38px;
-    left: 30px;
+    top: 37px;
+    left: 20px;
     margin: 0;
+  }
+  .logo {
+    width: 110px;
+  }
+
+  .social {
+    margin-left: 50px;
+    display: none;
+  }
+
+  .social-icon {
+    font-size: 40px;
+    padding: 20px;
+  }
+  .social.active {
+    display: block;
   }
 
   .header {
@@ -550,6 +589,11 @@ li {
     width: 100%;
   }
 
+  li {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -562,6 +606,7 @@ li {
     float: none;
     text-align: center;
   }
+
   .nav-list.active {
     display: block;
   }
