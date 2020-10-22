@@ -46,6 +46,11 @@ body {
   cursor: pointer;
   box-shadow: 0 14px 48px 0 rgba(255, 184, 0, 0.39);
   background-color: #ffb800;
+  text-decoration: none;
+}
+
+.mobile-cv {
+  display: none;
 }
 
 .cv-container {
@@ -338,7 +343,6 @@ li {
 .projects-title {
   text-align: center;
   margin-bottom: -20px;
-  margin-top: 110px;
   font-family: 'Roboto Mono', monospace;
   border-bottom: solid 3px #ffb800;
   width: fit-content;
@@ -350,6 +354,10 @@ li {
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around;
+}
+
+.project-description {
+  margin-top: 1px;
 }
 
 .project {
@@ -427,15 +435,11 @@ li {
   border: 0;
   outline: 0;
   padding: 1em;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
   border-radius: 8px;
   display: block;
   width: 100%;
   margin-top: 1em;
   font-family: 'Merriweather', sans-serif;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   resize: none;
 }
@@ -566,6 +570,10 @@ li {
   .social {
     margin-left: 50px;
     display: none;
+  }
+
+  .mobile-cv {
+    display: block;
   }
 
   .social-icon {

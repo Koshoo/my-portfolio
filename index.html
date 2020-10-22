@@ -3,12 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    /> -->
     <script
       src="https://kit.fontawesome.com/94cb2ded38.js"
       crossorigin="anonymous"
@@ -61,6 +55,11 @@
           <li>
             <a href="#scroll3" class="nav-link not-selected">Contact</a>
           </li>
+          <li class="mobile-cv">
+            <a href="./assets/Resume.pdf" class="cv glowButton" download>
+              <i class="fas fa-file-download download-icon"></i>DOWNLOAD CV</a
+            >
+          </li>
         </ul>
 
         <div class="social">
@@ -76,7 +75,7 @@
           ></a>
         </div>
         <div class="cv-container">
-          <a class="cv glowButton">
+          <a href="./assets/Resume.pdf" class="cv glowButton" download>
             <i class="fas fa-file-download download-icon"></i>DOWNLOAD CV</a
           >
         </div>
@@ -114,12 +113,15 @@
           <h3 class="about-title">About Me</h3>
           <p class="about">
             I am a Full Stack Web Developer who loves to solve problems and face
-            challanges.<br /><br />
+            challanges.
+            <br /><br />
             A self taught programmer with over 2 years of experience in
-            developing web applications,<br />
+            developing web applications,
+            <br />
             using the most recent and relavent languages and frameworks, such as
             HTML, CSS, Javascript, TypeScript, React, Node.js, Express, MongoDB
-            and GraphQL. <br /><br />
+            and GraphQL.
+            <br /><br />
             Super motivated to keep developing and learning.
             <br /><br />
             Feel free to contact me through the form below.
@@ -165,11 +167,11 @@
       <div class="modal">
         <span class="close">&times;</span>
 
-        <iframe
+        <img
           class="modal-content"
           id="modal-image"
           title="description"
-        ></iframe>
+        ></img>
         <div id="caption"></div>
       </div>
 
@@ -177,75 +179,66 @@
       <div class="projects">
         <div class="project">
           <img
-            src=""
-            class="screenshot"
-            alt=""
-            data-url="https://koshoo.github.io/Calculator/"
-          />
-          <p class="project-title" id="bla">This Website 😅</p>
-          <p class="project-description">
-            Vanilla JS, HTML and CSS<br />using no frameworks
-          </p>
-          <a href="https://benkosh.com" target="">Link</a>
-        </div>
-        <div class="project">
-          <img
             src="./assets/project-screenshots/calculator.png"
             class="screenshot"
             alt="A Simple Calculator built using HTML, CSS and Vanilla Javascript"
-            data-url="https://koshoo.github.io/Calculator/"
           />
           <p class="project-title">Calculator</p>
           <p class="project-description">Vanilla JS, HTML and CSS</p>
+
           <a href="https://koshoo.github.io/Calculator/" target="">Link</a>
+          <a href="https://github.com/Koshoo/Calculator">Github Repo</a>
         </div>
 
         <div class="project">
           <img
             src="./assets/project-screenshots/metronome.png"
-            alt=""
             class="screenshot"
-            data-url="https://koshoo.github.io/metronome/"
+            alt="A Metronome built using HTML, CSS and Vanilla Javascript"
           />
           <p class="project-title">Metronome</p>
           <p class="project-description">Vanilla JS, HTML and CSS</p>
+
           <a href="https://koshoo.github.io/metronome/" target="">Link</a>
+          <a href="https://github.com/Koshoo/metronome">Github Repo</a>
         </div>
 
         <div class="project">
           <img
             src="./assets/project-screenshots/etch-a-sketch.png"
-            alt=""
+            alt="Etch-A-Sketch Drawing game built using HTML,CSS and Vanilla Javascript"
             class="screenshot"
-            data-url="https://koshoo.github.io/etch-a-sketch/"
           />
-
           <p class="project-title">Etch-A-Sketch Drawing Game</p>
           <p class="project-description">Vanilla JS, HTML and CSS</p>
 
           <a href="https://koshoo.github.io/etch-a-sketch/">Link</a>
+          <a href="https://github.com/Koshoo/etch-a-sketch">Github Repo</a>
         </div>
+
         <div class="project">
           <img
             src="./assets/project-screenshots/new-blog.png"
-            alt=""
+            alt="A Blog list made using React, Redux, MongoDB, Express and NodeJS. 
+            Username - benkosh Password - 1234"
             class="screenshot"
-            data-url="https://stark-crag-28602.herokuapp.com/"
+
           />
 
-          <p class="project-title">Blog App</p>
+          <p class="project-title">Blog List</p>
           <p class="project-description">
             React, Redux, MongoDB, Express and NodeJS
           </p>
 
           <a href="https://stark-crag-28602.herokuapp.com/">Link</a>
+          <a href="https://github.com/Koshoo/blog-app">Github Repo</a>
         </div>
-        <div class="project blog-app">
+
+        <div class="project">
           <img
-            src="./assets/project-screenshots/new-blog.png"
-            alt=""
+            src="./assets/project-screenshots/phonebook.png"
+            alt="A Phonebook made using React, Redux, MongoDB, Express and NodeJS."
             class="screenshot"
-            data-url="https://phonebook-kosho.herokuapp.com/"
           />
 
           <p class="project-title">PhoneBook</p>
@@ -253,9 +246,9 @@
             React, Redux, MongoDB, Express and NodeJS
           </p>
 
-          <a href="https://stark-crag-28602.herokuapp.com/">Link</a>
+          <a href="https://phonebook-kosho.herokuapp.com/">Link</a>
+          <a href="https://github.com/Koshoo/Phonebook">Github Repo</a>
         </div>
-        <div class="project">asdasd</div>
       </div>
     </div>
 

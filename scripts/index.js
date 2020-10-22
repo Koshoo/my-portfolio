@@ -12,6 +12,7 @@ const toggleButton = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const form = document.querySelector('form');
 const social = document.querySelector('.social');
+
 // Modal query selectors
 const modal = document.querySelector('.modal');
 const closeModalButton = document.querySelector('.close');
@@ -63,10 +64,9 @@ const handleScroll = (e) => {
     : (goToTopButton.style.display = 'none');
 
   // Figure out which navbar link should be active and set it as active
-
   if (elementInViewport(document.querySelector('.about-title'))) {
     setSelected(navButtons[1]);
-  } else if (elementInViewport(document.querySelector('#bla'))) {
+  } else if (elementInViewport(document.querySelector('.project-title'))) {
     setSelected(navButtons[2]);
   } else if (elementInViewport(document.querySelector('.contact-title'))) {
     setSelected(navButtons[3]);
@@ -104,7 +104,7 @@ const handleToggleButtonClick = () => {
 
 function handleModal() {
   modal.style.display = 'block';
-  modalImg.src = this.dataset.url;
+  modalImg.src = this.src;
   captionText.innerHTML = this.alt;
   header.style.visibility = 'hidden';
 }
@@ -127,11 +127,11 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// When the user clicks on (x), close the modal
 closeModalButton.addEventListener('click', () => {
   modal.style.display = 'none';
   header.style.visibility = 'visible';
 });
+
 modal.addEventListener('click', () => {
   modal.style.display = 'none';
   header.style.visibility = 'visible';
@@ -140,8 +140,6 @@ modal.addEventListener('click', () => {
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
 // window.addEventListener('load', () => window.scrollTo(0, 0));
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
 
 // const typewriterOptions = [
 //   'Full-Stack Web Developer',
