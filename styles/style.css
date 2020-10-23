@@ -415,11 +415,11 @@ li {
 
 #section4 {
   background: #f1f1f1;
-  height: 70%;
+  height: fit-content;
 }
 
 .contact-container {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .contact-title {
@@ -491,9 +491,10 @@ li {
   width: 100%;
 }
 
-.made-by {
+.footer {
   text-align: center;
   font-family: 'Roboto Mono', monospace;
+  margin-top: 10px;
 }
 
 #toTop {
