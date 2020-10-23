@@ -94,10 +94,16 @@ const handleNavButtonClick = (navButton) => {
 };
 
 const handleToggleButtonClick = () => {
-  setTimeout(() => {
+  if (navList.classList.contains('active')) {
     navList.classList.toggle('active');
     social.classList.toggle('active');
-  }, 300);
+  } else {
+    setTimeout(() => {
+      navList.classList.toggle('active');
+      social.classList.toggle('active');
+    }, 300);
+  }
+
   header.classList.toggle('active');
   header.style.backgroundColor = 'black';
 };
