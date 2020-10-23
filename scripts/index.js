@@ -89,6 +89,7 @@ const setSelected = (toSelect) => {
 const handleNavButtonClick = (navButton) => {
   setSelected(navButton);
   if (header.classList.contains('active')) {
+    bars.forEach((bar) => bar.classList.remove('open'));
     header.classList.toggle('active');
     navList.classList.toggle('active');
     social.classList.toggle('active');
