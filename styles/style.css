@@ -489,8 +489,7 @@ li {
 .footer {
   text-align: center;
   font-family: 'Roboto Mono', monospace;
-  margin-top: 10px;
-  margin: 0 30px;
+  margin: 15px 30px;
 }
 
 #toTop {
