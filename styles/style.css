@@ -592,6 +592,8 @@ li {
 
   .header.active {
     height: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-list {
@@ -606,10 +608,8 @@ li {
 
   .navbar {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-right: 24px;
     width: 80%;
-    margin-left: 25px;
   }
 
   .nav-list li {
