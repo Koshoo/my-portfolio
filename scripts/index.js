@@ -139,7 +139,7 @@ modal.addEventListener('click', () => {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('hashchange', removeHash);
-// window.addEventListener('load', () => window.scrollTo(0, 0));
+window.addEventListener('load', () => window.scrollTo(0, 0));
 
 // const typewriterOptions = [
 //   'Full-Stack Web Developer',
@@ -153,7 +153,7 @@ window.addEventListener('hashchange', removeHash);
 //   setInterval(() => {
 //     typeWriterText.innerHTML = options[count];
 //     typeWriterText.style.animation = 'none';
-//     typeWriterText.offsetHeight; /* trigger reflow */
+//     typeWriterText.offsetHeight;
 //     typeWriterText.style.animation = null;
 //     typeWriterText.style.animationDuration = '1s';
 //     count++;
