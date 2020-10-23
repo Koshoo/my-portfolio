@@ -24,12 +24,7 @@ body {
   z-index: 9999;
   width: 100%;
   height: 90px;
-  align-items: center;
   background-color: black;
-}
-
-.section {
-  overflow: hidden;
 }
 
 .download-icon {
@@ -248,10 +243,10 @@ li {
 }
 
 .skills {
-  text-align: right; /* Right-align text */
+  text-align: right;
   padding: 4px 0;
   line-height: 70%;
-  color: rgb(214, 206, 206); /* White text color */
+  color: rgb(214, 206, 206);
   font-weight: bolder;
   background-color: #0078ff;
   font-size: 14px;
@@ -363,11 +358,11 @@ li {
 }
 
 .project {
-  height: 600px;
-  width: 400px;
+  height: 700px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  margin: 50px 30px;
+  margin: 20px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -537,7 +532,7 @@ li {
   }
 }
 
-@keyframes typing {
+/* @keyframes typing {
   from {
     width: 0%;
   }
@@ -556,7 +551,7 @@ li {
   50% {
     border-color: #ffb800;
   }
-}
+} */
 
 /* Mobile */
 
