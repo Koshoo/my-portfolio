@@ -130,8 +130,8 @@ li {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 34px;
-  height: 26px;
+  width: 33px;
+  height: 26.2px;
   cursor: pointer;
 }
 
@@ -625,7 +625,7 @@ li {
     transform: translateY(12.5px) translateY(-50%) rotate(-45deg);
   }
   .hbar2.open {
-    display: none;
+    opacity: 0;
   }
   .hbar3.open {
     transform: translateY(-12.5px) translateY(50%) rotate(45deg);
