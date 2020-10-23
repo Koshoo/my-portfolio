@@ -130,7 +130,7 @@ li {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 38px;
+  width: 34px;
   height: 26px;
   cursor: pointer;
 }
@@ -615,6 +615,20 @@ li {
   .nav-list li {
     float: none;
     text-align: center;
+  }
+
+  .hbar {
+    transition: all 1s;
+  }
+
+  .hbar1.open {
+    transform: translateY(12.5px) translateY(-50%) rotate(-45deg);
+  }
+  .hbar2.open {
+    display: none;
+  }
+  .hbar3.open {
+    transform: translateY(-12.5px) translateY(50%) rotate(45deg);
   }
 
   .nav-list.active {

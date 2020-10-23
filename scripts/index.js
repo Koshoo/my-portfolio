@@ -9,6 +9,7 @@ const goToTopButton = document.querySelector('#toTop');
 const typeWriterText = document.querySelector('.typewriter-text');
 const seeMoreButton = document.querySelector('.see-more');
 const toggleButton = document.querySelector('.hamburger');
+const bars = document.querySelectorAll('.hbar');
 const navList = document.querySelector('.nav-list');
 const form = document.querySelector('form');
 const social = document.querySelector('.social');
@@ -52,6 +53,7 @@ const removeHash = () => {
 const handleScroll = (e) => {
   // Hide mobile menu on scroll
   if (header.classList.contains('active')) {
+    bars.forEach((bar) => bar.classList.remove('open'));
     navList.classList.toggle('active');
     header.classList.toggle('active');
     social.classList.toggle('active');
@@ -94,6 +96,7 @@ const handleNavButtonClick = (navButton) => {
 };
 
 const handleToggleButtonClick = () => {
+  bars.forEach((bar) => bar.classList.toggle('open'));
   if (navList.classList.contains('active')) {
     navList.classList.toggle('active');
     social.classList.toggle('active');
