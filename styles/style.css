@@ -353,10 +353,6 @@ li {
   justify-content: space-around;
 }
 
-.project-description {
-  margin-top: 1px;
-}
-
 .project {
   height: 700px;
   width: 500px;

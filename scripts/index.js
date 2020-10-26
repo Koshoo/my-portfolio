@@ -88,6 +88,7 @@ const setSelected = (toSelect) => {
 
 const handleNavButtonClick = (navButton) => {
   setSelected(navButton);
+
   if (header.classList.contains('active')) {
     bars.forEach((bar) => bar.classList.remove('open'));
     header.classList.toggle('active');
@@ -97,19 +98,17 @@ const handleNavButtonClick = (navButton) => {
 };
 
 const handleToggleButtonClick = () => {
-  bars.forEach((bar) => bar.classList.toggle('open'));
   if (navList.classList.contains('active')) {
     navList.classList.toggle('active');
     social.classList.toggle('active');
   } else {
-    setTimeout(() => {
+    timeout = setTimeout(() => {
       navList.classList.toggle('active');
       social.classList.toggle('active');
     }, 300);
   }
-
+  bars.forEach((bar) => bar.classList.toggle('open'));
   header.classList.toggle('active');
-  header.style.backgroundColor = 'black';
 };
 
 function handleModal() {
