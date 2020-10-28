@@ -665,11 +665,12 @@ li {
     right: auto;
     top: auto;
     margin: 0 auto;
-    margin-top: -20px;
+    margin-top: -40px;
+    height: 9rem;
   }
 
   .see-more {
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   .card {
