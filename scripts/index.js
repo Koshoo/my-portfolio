@@ -13,6 +13,9 @@ const bars = document.querySelectorAll('.hbar');
 const navList = document.querySelector('.nav-list');
 const form = document.querySelector('form');
 const social = document.querySelector('.social');
+const todoImage = document.querySelector('#todo-image');
+const socialImage = document.querySelector('#social-image');
+const etchImage = document.querySelector('#etch-image');
 
 // Modal query selectors
 const modal = document.querySelector('.modal');
@@ -169,3 +172,24 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 //     if (count >= options.length) count = 0;
 //   }, 5000);
 // };
+
+todoImage.addEventListener('mouseenter', function () {
+  this.src = './assets/project-gifs/todos.gif';
+});
+todoImage.addEventListener('mouseleave', function () {
+  this.src = './assets/project-screenshots/todo.png';
+});
+
+socialImage.addEventListener('mouseenter', function () {
+  this.src = './assets/project-gifs/social-board.gif';
+});
+socialImage.addEventListener('mouseleave', function () {
+  this.src = './assets/project-screenshots/posts-app.png';
+});
+
+etchImage.addEventListener('mouseenter', function () {
+  this.src = './assets/project-gifs/etch.gif';
+});
+etchImage.addEventListener('mouseleave', function () {
+  this.src = './assets/project-screenshots/etch-a-sketch.png';
+});

@@ -354,18 +354,21 @@ li {
 }
 
 .project {
-  height: 700px;
-  width: 500px;
+  height: 80%;
+  margin: 20px 0;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   font-family: 'Roboto Mono', monospace;
   background-color: white;
-  height: 80%;
-  border-radius: 30px;
+  border-radius: 20px;
+}
+
+.project-title {
+  font-size: 22px;
+  margin-bottom: 7px;
 }
 
 .project:hover {
@@ -373,8 +376,8 @@ li {
 }
 
 .screenshot {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   margin: 0 auto;
 }
 
